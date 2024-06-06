@@ -1,0 +1,1 @@
+var errorTypesMap = { 'letterCase': 'letterCase', 'digits': 'digits', 'characters': 'characters' };
