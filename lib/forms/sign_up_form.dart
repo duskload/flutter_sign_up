@@ -30,15 +30,12 @@ class _SignUpFormState extends State<SignUpForm> {
   }
 
   void _validateEmail(String value) {
-    print('_validateEmail $value}');
     if (!value.validateIfEmailIsCorrect()) {
-      print('in email valid $errorText');
       setState(() {
         validEmail = false;
         errorText = 'Email is invalid';
       });
     } else {
-      print('in email invalid $errorText');
       setState(() {
         validEmail = true;
         errorText = null;

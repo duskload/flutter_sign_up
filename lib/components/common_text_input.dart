@@ -1,4 +1,6 @@
 import "package:flutter/material.dart";
+import "package:flutter/services.dart";
+
 import "package:flutter_sign_up/style/app_colors.dart";
 
 class CommonTextInput extends StatefulWidget {
@@ -71,6 +73,9 @@ class _CommonTextInputState extends State<CommonTextInput>
             obscureText: widget.obscureText ? _hidden : widget.obscureText,
             validator: widget.validator,
             onChanged: widget.onChanged,
+            inputFormatters: [
+              LengthLimitingTextInputFormatter(64)
+            ],
             decoration: InputDecoration(
               errorText: widget.errorText,
               border: OutlineInputBorder(
